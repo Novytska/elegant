@@ -100,4 +100,8 @@
   @else if $media == lg {
     @media only screen and (max-width: 1199px) { @content; }
   }
+
+    @else if $media == xl {
+    @media only screen and (max-width: 2000px) { @content; }
+  }
 }

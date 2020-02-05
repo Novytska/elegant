@@ -11,6 +11,7 @@
 		display: none;
 	}
 
+
 	&__mob {
 		display: none;
 		background-repeat: no-repeat;
@@ -31,6 +32,11 @@
 	position: relative;
 	height: 100%;
 	min-height: 705px;
+	text-align: center;
+
+		@include breakpoints(xl) {
+		height: 100vh;
+	}
 }
 
 .header-nav {
@@ -154,6 +160,7 @@
 	}
 }
 .header-content {
+
 	&__text {
 		transform: translateY(220px);
 		font-size: 80px;
@@ -163,6 +170,59 @@
 		color: $background-color;
 		text-align: center;
 		position: relative;
+	}
+
+	&__scroll {
+		border-radius: 50%;
+		background-color: transparent;
+		border: 2px solid $background-color;
+		position: absolute;
+		max-width: 50px;
+		width: 100%;
+		max-height: 50px;
+		height: 100%;
+		bottom: 40px;
+		right: 49%;
+		opacity: 60%;
+
+			@include breakpoints(sm) {
+				right: 45%;
+			}
+
+			&:hover,
+			&:focus {
+				opacity: 100%;
+
+				&::before {
+					animation-name: slidein;
+					animation-duration: 1.5s;
+					animation-iteration-count: infinite;
+					animation-direction: alternate;
+					font-size: 24px;
+
+					@keyframes slidein {
+						  from {
+						    top: 20%;
+						    opacity: 0%
+						  }
+
+						  to {
+						    top: 50%;
+						    opacity: 100%    
+						}
+					}
+				}	
+			}
+
+		&::before {
+			content: '\e807';
+			font-family: 'fontello'; 
+			position: absolute;
+			color: $background-color;
+			font-size: 24px;
+			top: 15px;
+			left: 12px;
+		}
 	}
 }		
 

@@ -45,16 +45,12 @@ $(document).ready(function(){
     // Do something else, like open/close menu
   });
 
- //Toggle
+//   var button = $('.header-content__scroll');		 
+// $button.on('click', function(){
+// $('body, html').animate({
+// scrollTop:$(document).height()}, 800;
+// });
 
-//   $('.plan-toogles__container').on('click', function() {
-//     $('.plan-toogles__container').removeClass('active-toggles');
-//     $('.plan-toogles').toggleClass('active-toggles');
-//     $(this).addClass('active-toggles');
-//     var currentIndex = $(this).attr('data-index');
-//     $('.plan-section').removeClass('active-section');
-//     $('#'+currentIndex).addClass('active-section');
-//   })
 
 //   //Footer-accordion
     

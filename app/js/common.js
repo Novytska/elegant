@@ -52,14 +52,21 @@ $(document).ready(function(){
 // });
 
 
-//   //Footer-accordion
-    
-//   $('.footer-content__header').on('click', function() {
-//     $(this).toggleClass('active-footer');
+  // Footer-accordion
+
+  $('.footer-content__item-title').on('click', function() {
+    $(this).toggleClass('active-footer').next().slideToggle();
+	// открываем или скрываем блок под заголовком, по которому кликнули
+    $('.footer-content__item-title').not(this).removeClass('active-footer').next().slideUp();
+    })
+
+//   $('footer-content__item-title').on('click', function() {
+// //скрываем все кроме того, что должны открыть
+//   $('footer-content__item-info').not($(this).next()).slideUp(1000);
 // // открываем или скрываем блок под заголовком, по которому кликнули
-//     $(this).next().slideToggle();
-//     })
-  
+//     $(this).next().slideToggle(2000);
+// })
+ 
 });
 
 

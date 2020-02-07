@@ -47,10 +47,10 @@ img {
 	font-weight: 700;
 	color: $title-color;
 	
-	// @include breakpoints(sm) {
-	// 	font-size: 42px;
-	// 	line-height: 52px;	
-	// }	
+	@include breakpoints(sm) {
+		font-size: 38px;
+		line-height: 42px;	
+	}	
 }
 
 .title-h2 {
@@ -59,10 +59,10 @@ img {
 	color: $title-color;
 	font-weight: 600;
 
-	// @include breakpoints(sm) {
-	// 	font-size: 32px;
-	// 	line-height: 40px;	
-	// }
+	@include breakpoints(sm) {
+		font-size: 36px;
+		line-height: 40px;	
+	}
 }
 
 .title-h3 {
@@ -96,7 +96,7 @@ img {
 .main-text {
 	font-size: 18px;
 	color: $text-color;
-	line-height: 24px;
+	line-height: 28px;
 	font-weight: 300;
 
 	@include breakpoints(sm) {

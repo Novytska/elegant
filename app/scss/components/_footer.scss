@@ -18,12 +18,12 @@
 	}    
 
 	&__iframe {
-	position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    border: 0
 	}
 }
 
@@ -36,12 +36,12 @@
 	margin: 0 auto;
 
 	&__item {
-		flex: 1 1 50%;
+		flex: 0 0 50%;
 		color: $footer-text;
 		margin-bottom: 80px;
 
-		@include breakpoints(sm) {
-			flex: 1 1 100%;
+		@include breakpoints(md) {
+			flex: 0 0 100%;
 			text-align: left;
 			margin-bottom: 20px;
 		}
@@ -52,8 +52,9 @@
 			text-transform: uppercase;
 			margin-bottom: 50px;
 			padding: 15px;
+			transition: all .3s ease-in; 
 
-			@include breakpoints(sm) {
+			@include breakpoints(md) {
 
 				margin-bottom: 0;
 				cursor: pointer;
@@ -63,7 +64,7 @@
 					position: absolute;
 					font-family: 'fontello';
 					right: 30px;
-					transition: all .3s ease; 
+					transition: all .3s ease-in; 
 					z-index: 2;
 				}
 			}
@@ -78,25 +79,25 @@
 			width: 100%;
 			margin: 0 auto;
 
-			@include breakpoints(sm) {
+			@include breakpoints(md) {
 				font-size: 16px;
 				line-height: 20px;
 				padding-bottom: 10px;
 				margin: 0;
 				color: $background-color;
 				font-weight: normal;
-
+				transition: all .3s ease-in; 
 			}
 		}
 
 		&-info {
-			@include breakpoints(lg) {
-				display: block;
+			@include breakpoints(xl) {
+				display: block !important;
 			}
 		
-			@include breakpoints(sm) {
+			@include breakpoints(md) {
 				display: none;
-				background-color: rgba(2,23,37, .4);
+				background-color: rgba(2,23,37, .3);
 				padding: 15px;
 			}			
 		}
@@ -104,12 +105,12 @@
 }
 
 
-.active-footer {
+.js-active-title {
 	color: $background-color;
 	background-color: rgba(2,23,37, .7);
+	
 	&:after {
 		transform: rotate(180deg);
 		color: $background-color;
-	}
-		
+	}		
 }

@@ -37,9 +37,8 @@ $(document).ready(function(){
 
 // Navigation
 
-    var $hamburger = $(".hamburger");
-  $hamburger.on("click", function(e) {
-    $hamburger.toggleClass("is-active");
+  $(".hamburger").on("click", function(e) {
+    $(this).toggleClass("is-active");
     $('.header-navigation').toggleClass('active');
     $('body').toggleClass('overflow-hidden');  
     // Do something else, like open/close menu
@@ -54,19 +53,20 @@ $(document).ready(function(){
 
   // Footer-accordion
 
-  $('.footer-content__item-title').on('click', function() {
-    $(this).toggleClass('active-footer').next().slideToggle();
-	// открываем или скрываем блок под заголовком, по которому кликнули
-    $('.footer-content__item-title').not(this).removeClass('active-footer').next().slideUp();
-    })
-
-//   $('footer-content__item-title').on('click', function() {
-// //скрываем все кроме того, что должны открыть
-//   $('footer-content__item-info').not($(this).next()).slideUp(1000);
-// // открываем или скрываем блок под заголовком, по которому кликнули
-//     $(this).next().slideToggle(2000);
-// })
- 
+  $('.js-accordion-title').on('click', function() {
+    var parentItem = $(this).closest('.js-accordion-parent'),
+        parentWrap = $(this).closest('.js-accordion');
+    if($(this).is('.js-active-title')) {
+      parentWrap.find('.js-accordion-title').removeClass('js-active-title');
+      parentItem.find('.js-accordion-container').slideUp();
+      $(this).removeClass('js-active-title');
+    } else {
+      parentWrap.find('.js-accordion-title').removeClass('js-active-title');
+      parentWrap.find('.js-accordion-container').slideUp();
+      parentItem.find('.js-accordion-container').slideDown();
+      $(this).addClass('js-active-title');
+    }
+  })
 });
 
 

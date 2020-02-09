@@ -4,8 +4,10 @@
 	background-size: cover;
 	position: absolute;
 	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
+	min-height: 705px;
 
 	@include breakpoints(md) {
 		display: none;
@@ -30,27 +32,33 @@
 .header-container {
 	height: 100%;
 	position: relative;
-	height: 100%;
-	min-height: 705px;
 	text-align: center;
+	min-height: 705px;
 
-		@include breakpoints(xl) {
+
+	@include breakpoints(xl) {
 		height: 100vh;
 	}
+
+	@include breakpoints(ьв) {
+		height: 100%;
+	}	
 }
 
 .header-nav {
 	@include fcsb;
-	padding-top: 30px !important;
+	padding-top: 30px;
+	z-index: 10;
+	width: 100%;
+
+	@include breakpoints(md) {
+		padding-top: 10px;
+		position: fixed;
+	}
 }
 .header-logo {
 	cursor: pointer;
-	position: relative;
 	z-index: 10;
-
-	@include breakpoints(md) {
-		position: fixed;
-	}
 }
 
 .header-menu {
@@ -58,7 +66,7 @@
 	font-size: 16px;
 	font-weight: 600;
 	display: flex;
-	align-items: flex-end;
+	align-items: center;
 
 
 	&__text {
@@ -68,6 +76,8 @@
 		z-index: 10;
 		font-weight: 600;
 		font-size: 16px;
+		display: block;
+		align-items: center;
 
 		@include breakpoints(md) {
 			display: none;
@@ -76,20 +86,16 @@
 
 	&__btn {
 		z-index: 10;
-		top: 5px;
 		position: relative;
 
 		@include breakpoints(md) {
-			position: fixed;
-			right: 0;
 			margin-right: 20px;
-			top: 15px;
 		}
 	}
 }
 
 .header-navigation {
-	display: block;
+	@include fcc;
 	position: fixed;
 	height: 100%;
 	width: 100%;
@@ -99,9 +105,7 @@
 	right: 0;
 	top: 0;
 	z-index: 1;
-	padding: 90px 20px;
 	transition: all 0.7s cubic-bezier(0.545, 0, 0.05, 1);
-	text-align: center;
 
 	@include breakpoints(md) {
 		max-width: 100%;
@@ -122,9 +126,9 @@
 		position: relative;
 		padding-bottom: 5px;
 
-		// @include breakpoints(sm) {
-		// 	font-size: 20px; 
-		// }
+		@include breakpoints(sm) {
+			font-size: 20px; 
+		}
 
 		&::before,
 		&::after {
@@ -160,16 +164,22 @@
 	}
 }
 .header-content {
+	min-height: calc(100% - 72px);
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+
 
 	&__text {
-		transform: translateY(220px);
 		font-size: 80px;
 		line-height: 84px;
 		font-style: italic;
 		font-weight: 300;
 		color: $background-color;
-		text-align: center;
-		position: relative;
+		display: flex;
+		align-self: center;
 
 		@include breakpoints(sm) {
 			font-size: 50px;
@@ -177,21 +187,27 @@
 		}
 	}
 
+	&__btn {
+		align-self: flex-end;
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
 	&__scroll {
+		display: flex;
 		border-radius: 50%;
 		background-color: transparent;
 		border: 2px solid $background-color;
-		position: absolute;
 		max-width: 50px;
 		width: 100%;
-		max-height: 50px;
-		height: 100%;
-		bottom: 40px;
-		right: 49%;
+		height: 50px;
+		align-self: flex-end;
 		opacity: 60%;
+		position: relative;
+		margin: 0 auto;
 
 			@include breakpoints(sm) {
-				right: 45%;
+				align-self: flex-end;
 			}
 
 			&:hover,
@@ -231,16 +247,3 @@
 	}
 }		
 
-		// &:before {
-		// 	position: absolute;
-		// 	content: '';
-		// 	background-image: url(../images/header-animated.png);
-		// 	max-width: 500px;
-		// 	width: 100%;
-		// 	height: 100%;
-		// 	min-height: 520px;
-		// 	z-index: 1;
-		// 	top: 0;
-		// 	left: 50%;
-		// }
-	

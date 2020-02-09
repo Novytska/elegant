@@ -10,10 +10,10 @@
 </head>
 <body>
 	<div class="wrapper">
-		<div class="header-container">
-			<div class="header-wrap" style="background-image: url(images/header-bg.png);"></div>
-			<div class="header-wrap__mob" style="background-image: url(images/mobile-bg.png);"></div>
-			<div class="header-nav container">
+		<div class="header-wrap" style="background-image: url(images/header-bg.png);"></div>
+		<div class="header-wrap__mob" style="background-image: url(images/mobile-bg.png);"></div>
+		<div class="header-container container">
+			<div class="header-nav">
 				<div class="header-logo">
 					<a href="#" class="header-logo__link">
 						<img src="images/logo.png" alt="" class="header-logo__img">
@@ -50,9 +50,11 @@
 						</div>
 					</div>
 				</div>
-			<div class="header-content container">
+			<div class="header-content">
 				<div class="header-content__text">Say Haloa to your Portfolio</div>
-				<button type="button" class="header-content__scroll btn" id="scroll_down"></button>
+				<div class="header-content__btn">
+					<button type="button" class="header-content__scroll btn" id="scroll_down"></button>
+				</div>		
 			</div>	
 		</div>
 		<div class="about-container container">
@@ -67,7 +69,7 @@
 		</div>
 		<div class="work-container">
 			<div class="work-content">
-				<div class="title-content container">
+				<div class="title-content">
 					<div class="title-content__subtitle title-h5">What We Do</div>
 					<div class="title-content__title title-h1">Show Your Amazing Work</div>
 				</div>
@@ -115,8 +117,8 @@
 				</div>
 			</div>	
 		</div>
-		<div class="team-container">
-			<div class="title-content container">
+		<div class="team-container container">
+			<div class="title-content">
 				<div class="title-content__subtitle title-h5">Who We Are</div>
 				<div class="title-content__title title-h1">The Amazing People Behind This</div>
 			</div>
@@ -154,7 +156,7 @@
 				</div>	
 			</div>
 		</div>
-		<div class="blog-container">
+		<div class="blog-container container">
 			<div class="title-content">
 				<div class="title-content__subtitle title-h5">Last Post</div>
 				<div class="title-content__title title-h1">We Like to Write</div>
@@ -183,36 +185,35 @@
 						<iframe width="770" height="295" id="gmap_canvas" src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" class="footer-map__iframe"></iframe>
 					</div>
 				</div>
-				<div class="footer-content">
-						<div class="footer-content__item">
-							<div class="footer-content__item-title">Location</div>
-							<div class="footer-content__item-info">
-								<span class="footer-content__item-text">elegant@elegant.com</span>
-								<span class="footer-content__item-text">commercial@elegant.com</span>
-							</div>	
+				<div class="footer-content js-accordion">
+					<div class="footer-content__item js-accordion-parent">
+						<div class="footer-content__item-title js-accordion-title">Location</div>
+						<div class="footer-content__item-info js-accordion-container">
+							<span class="footer-content__item-text">elegant@elegant.com</span>
+							<span class="footer-content__item-text">commercial@elegant.com</span>
 						</div>	
-						<div class="footer-content__item">
-							<div class="footer-content__item-title">Phone</div>
-							<div class="footer-content__item-info">
-								<span class="footer-content__item-text">elegant@elegant.com</span>
-								<span class="footer-content__item-text">commercial@elegant.com</span>
-							</div>
+					</div>	
+					<div class="footer-content__item js-accordion-parent">
+						<div class="footer-content__item-title js-accordion-title">Phone</div>
+						<div class="footer-content__item-info js-accordion-container">
+							<span class="footer-content__item-text">elegant@elegant.com</span>
+							<span class="footer-content__item-text">commercial@elegant.com</span>
 						</div>
-						<div class="footer-content__item">
-							<div class="footer-content__item-title">Fax</div>
-							<div class="footer-content__item-info">
-								<span class="footer-content__item-text">elegant@elegant.com</span>
-								<span class="footer-content__item-text">commercial@elegant.com</span>
-							</div>
-						</div>
-						<div class="footer-content__item">
-							<div class="footer-content__item-title">Email</div>
-							<div class="footer-content__item-info">
-								<span class="footer-content__item-text">elegant@elegant.com</span>
-								<span class="footer-content__item-text">commercial@elegant.com</span>
-							</div>
-						</div>	
 					</div>
+					<div class="footer-content__item js-accordion-parent">
+						<div class="footer-content__item-title js-accordion-title">Fax</div>
+						<div class="footer-content__item-info js-accordion-container">
+							<span class="footer-content__item-text">elegant@elegant.com</span>
+							<span class="footer-content__item-text">commercial@elegant.com</span>
+						</div>
+					</div>
+					<div class="footer-content__item js-accordion-parent">
+						<div class="footer-content__item-title js-accordion-title">Email</div>
+						<div class="footer-content__item-info js-accordion-container">
+							<span class="footer-content__item-text">elegant@elegant.com</span>
+							<span class="footer-content__item-text">commercial@elegant.com</span>
+						</div>
+					</div>	
 				</div>
 			</div>
 		</div>

@@ -4,10 +4,8 @@
 	background-size: cover;
 	position: absolute;
 	top: 0;
-	left: 0;
 	width: 100%;
 	height: 100%;
-	min-height: 705px;
 
 	@include breakpoints(md) {
 		display: none;
@@ -29,30 +27,30 @@
 		}
 	}
 }
+.header-main {
+	position: relative;
+	height: 100vh;
+	min-height: 500px;
+	text-align: center;
+}
+
 .header-container {
+	display: flex;
+	flex-direction: column;
 	height: 100%;
 	position: relative;
-	text-align: center;
-	min-height: 705px;
-
-
-	@include breakpoints(xl) {
-		height: 100vh;
-	}
-
-	@include breakpoints(ьв) {
-		height: 100%;
-	}	
 }
 
 .header-nav {
-	@include fcsb;
+	display: flex;
+	align-items: center;
 	padding-top: 30px;
 	z-index: 10;
 	width: 100%;
 
+
 	@include breakpoints(md) {
-		padding-top: 10px;
+		padding: 15px;
 		position: fixed;
 	}
 }
@@ -67,6 +65,7 @@
 	font-weight: 600;
 	display: flex;
 	align-items: center;
+	margin-left: auto;
 
 
 	&__text {
@@ -107,6 +106,7 @@
 	z-index: 1;
 	transition: all 0.7s cubic-bezier(0.545, 0, 0.05, 1);
 
+
 	@include breakpoints(md) {
 		max-width: 100%;
 		transform: translateY(-90%);
@@ -114,6 +114,7 @@
 
 	&.active {
 		transform: translateY(0);
+		// display: flex;
 	}
 
 	&__link {
@@ -164,13 +165,11 @@
 	}
 }
 .header-content {
-	min-height: calc(100% - 72px);
-	height: 100%;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-
+	flex: 1 1 auto;
 
 	&__text {
 		font-size: 80px;
@@ -179,7 +178,7 @@
 		font-weight: 300;
 		color: $background-color;
 		display: flex;
-		align-self: center;
+		align-self: flex-end;
 
 		@include breakpoints(sm) {
 			font-size: 50px;
@@ -191,6 +190,10 @@
 		align-self: flex-end;
 		width: 100%;
 		margin-bottom: 30px;
+
+		@include breakpoints(sm) {
+			margin-bottom: 30px;
+		}
 	}
 
 	&__scroll {
@@ -210,8 +213,7 @@
 				align-self: flex-end;
 			}
 
-			&:hover,
-			&:focus {
+			&:hover {
 				opacity: 100%;
 
 				&::before {

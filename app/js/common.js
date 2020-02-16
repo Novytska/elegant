@@ -43,12 +43,27 @@ $(document).ready(function(){
     $('body').toggleClass('overflow-hidden');  
     // Do something else, like open/close menu
   });
+		 
+(function() {
+  'use strict';
 
-//   var button = $('.header-content__scroll');		 
-// $button.on('click', function(){
-// $('body, html').animate({
-// scrollTop:$(document).height()}, 800;
-// });
+  var btnScrollDown = document.querySelector('.header-content__scroll');
+
+  function scrollDown() {
+    var windowCoords = document.documentElement.clientHeight;
+    (function scroll() {
+      if (window.pageYOffset < windowCoords) {
+        window.scrollBy(0, 10);
+        setTimeout(scroll, 0);
+      }
+      if (window.pageYOffset > windowCoords) {
+        window.scrollTo(0, windowCoords);
+      }
+    })();
+  }
+
+  btnScrollDown.addEventListener('click', scrollDown);
+})();
 
 
   // Footer-accordion
